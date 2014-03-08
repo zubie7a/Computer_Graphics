@@ -3,7 +3,7 @@ import processing.core.*;
 public class Window extends PApplet {
 
 	float axy;           // Variables regarding the angle of rotation
-    ;                    // ..between the pair of axis' X and Y
+	;                    // ..between the pair of axis' X and Y
 	float sx, sy;        // Variables regarding the scale for each axis
 	float tx, ty;        // Variables regarding the translating for each axis
 	Framecito frame;     // A little frame for setting values for transforming
