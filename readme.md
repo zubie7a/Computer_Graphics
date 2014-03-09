@@ -14,8 +14,7 @@ Each challenge will have a very comprenhensive PDF explaining the algorithms use
 
 ###Challenge 3 - Playing Around with Transformations in 2D / 3D
 (Click image, leads to a Youtube Video)
-![](https://raw2.github.com/Zubieta/Computer_Graphics/master/Screenshots/CG3_Trans.png) 
-
+[![](https://raw2.github.com/Zubieta/Computer_Graphics/master/Screenshots/CG3_Trans.png)](http://www.youtube.com/watch?v=a2qDobiht7g)
 ###Challenge 4 - Transformations in 2D: Rotate, Scale, Translate
 ![](https://raw2.github.com/Zubieta/Computer_Graphics/master/Screenshots/CG4_Trans.png) 
 ![](https://raw2.github.com/Zubieta/Computer_Graphics/master/Screenshots/CG4_GUI.png) 
