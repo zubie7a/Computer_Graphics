@@ -12,6 +12,9 @@ Each challenge will have a very comprenhensive PDF explaining the algorithms use
 ###Challenge 2 - Line Clipping: Cohen-Sutherland & Liang-Barsky
 ![](https://raw2.github.com/Zubieta/Computer_Graphics/master/Screenshots/CG2_Lines.png) 
 
+###Challenge 3 - Playing Around with Transformations in 2D / 3D
+(Click image, leads to a Youtube Video)
+![](https://raw2.github.com/Zubieta/Computer_Graphics/master/Screenshots/CG3_Trans.png) 
 
 ###Challenge 4 - Transformations in 2D: Rotate, Scale, Translate
 ![](https://raw2.github.com/Zubieta/Computer_Graphics/master/Screenshots/CG4_Trans.png) 
