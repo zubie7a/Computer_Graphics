@@ -1,25 +1,11 @@
 
 public class Line{
 	private int x1, y1, x2, y2; // Line starting and ending points
-	String type; // Type of line for determining draw color, if its a
-	             // outer line "OUTER", a inside line "IN", a box line "BOX"
-	             // By default every line is classified as outer, but then
-	             // after clipping they may be reclassified to INNER line)
 	public Line(int x1, int y1, int x2, int y2){
 		this.x1 = x1;
 		this.y1 = y1;
 		this.y2 = y2;
 		this.x2 = x2;
-		type = "OUTER";
-	}
-	public void setType(String tp){
-		type = tp;
-		// OUTER: line lying outside the boundaries of the clipping box
-		// INNER: line lying inside the boundaries of the clipping box
-		// BOX:   line treated differently because its part of the box
-	}
-	public String getType(){
-		return type;
 	}
 	public int getX1(){
 		return x1;
