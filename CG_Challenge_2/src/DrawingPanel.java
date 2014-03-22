@@ -31,7 +31,7 @@ public class DrawingPanel extends JPanel implements MouseListener, MouseMotionLi
 	private Box box;                   // The box used for the clipping
 	private double totalTime;          // A variable for storing the total cumulative time of line clipping
 	public DrawingPanel(Window window){
-		this.window = window; // Store reference to parent object
+		this.window = window;          // Store reference to parent object
 		addMouseListener(this);
 		addMouseMotionListener(this);    // Why would there be two separate Mouse-thing listeners?
 		dimY = window.getDimY();         // Get the Y dimension of the parent object

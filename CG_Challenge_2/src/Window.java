@@ -13,8 +13,8 @@ public class Window extends JFrame{
 		dimX = 700;
 		dimY = 700;
 		this.setResizable(false);
-		options = new OptionPanel(this);
 		canvas = new DrawingPanel(this);
+		options = new OptionPanel(this);
 		this.setLayout(new BorderLayout());
 		this.add(options, BorderLayout.SOUTH);
 		this.add(canvas, BorderLayout.CENTER);
