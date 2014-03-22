@@ -1,14 +1,13 @@
 import java.awt.BorderLayout;
 import java.awt.Dimension;
-
 import javax.swing.JFrame;
 
 public class Window extends JFrame{
 
-	private int dimX;
-	private int dimY;
 	private OptionPanel options;
 	private DrawingPanel canvas;
+	private int dimX;
+	private int dimY;
 	
 	public Window(){
 		dimX = 700;
@@ -21,7 +20,7 @@ public class Window extends JFrame{
 		this.add(canvas, BorderLayout.CENTER);
 		this.setSize(new Dimension(dimX, dimY));
 		this.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-		this.setTitle("Challenge #1 - Bresenham Lines / Circles");
+		this.setTitle("Challenge #2 - Cohen-Sutherland, Liang-Barsky Line Clipping");
 		this.setLocationRelativeTo(null);
 		this.setVisible(true);
 	}
@@ -38,8 +37,17 @@ public class Window extends JFrame{
 		return dimY;
 	}
 	
-	//This method passes messages from OptionPanel to DrawingPanel
+	//These methods passes messages from OptionPanel to DrawingPanel or viceversa
 	public void changeStatus(String newStatus){
 		canvas.changeStatus(newStatus); 
+	}
+	public void makeLines(){
+		canvas.makeLines();
+	}
+	public void updateTime(String s){
+		options.updateTime(s);
+	}
+	public void setLines(String s){
+		options.setLines(s);
 	}
 }
