@@ -22,3 +22,7 @@ Each challenge will have a very comprenhensive PDF explaining the algorithms use
 ###Challenge 5 - Transformations in 3D: Rotate, Scale, Translate
 ![](https://raw2.github.com/Zubieta/Computer_Graphics/master/Screenshots/CG5_Trans.png) 
 ![](https://raw2.github.com/Zubieta/Computer_Graphics/master/Screenshots/CG5_GUI.png) 
+
+###Challenge 6 - Projection and Camera Transformations
+![](https://raw2.github.com/Zubieta/Computer_Graphics/master/Screenshots/CG6_Trans.png) 
+![](https://raw2.github.com/Zubieta/Computer_Graphics/master/Screenshots/CG6_GUI.png) 
