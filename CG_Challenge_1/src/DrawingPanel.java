@@ -31,7 +31,7 @@ public class DrawingPanel extends JPanel implements MouseListener,
     private int dimY; // Height of frame/panel
     private int curX; // Current mouse X position
     private int curY; // Current mouse Y position
-    private int INF; // A very large number (?)
+    private int INF; // A very large number
 
     // Constructor method
     public DrawingPanel(Window window) {
