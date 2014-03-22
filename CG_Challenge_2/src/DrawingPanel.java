@@ -148,7 +148,7 @@ public class DrawingPanel extends JPanel implements MouseListener, MouseMotionLi
 		// A hovering sign with the current coordinates of a point, this one is
 		// ..not drawn into the currentImage because the idea is to show the coordi-
 		// ..nates of the cursor hovering the image.
-		g2d.setColor(Color.BLACK);
+		g2d.setColor(new Color(64, 64, 64));
 		String pos = px + ", " + py;
 		int mx = px + midX;
 		int my = -py + midY;
@@ -221,7 +221,7 @@ public class DrawingPanel extends JPanel implements MouseListener, MouseMotionLi
 			y1 *= -1; y2 *= -1;
 			x1 += midX; x2 += midX;
 			y1 += midY; y2 += midY;
-			g2d.setColor(Color.BLACK);
+			g2d.setColor(Color.WHITE);
 			g2d.drawLine(x1, y1, x2, y2);
 		}
 		else{
@@ -277,6 +277,8 @@ public class DrawingPanel extends JPanel implements MouseListener, MouseMotionLi
 	public void paintComponent(Graphics g){
 		Graphics2D g2d = (Graphics2D) g;
 		super.paintComponent(g2d); // Clears the screen
+		g2d.setColor(Color.BLACK);
+		g2d.fillRect(0, 0, dimX, dimY);
 		if (curImage == null){
 			// This is to avoid re-rendering/clipping all the lines when the screen is
 			// ..refreshed (which happens when moving the mouse or minimize/maximize) 
@@ -284,6 +286,8 @@ public class DrawingPanel extends JPanel implements MouseListener, MouseMotionLi
 			// ..be done again.
 			curImage = new BufferedImage(dimX, dimY, BufferedImage.TYPE_INT_ARGB);
 			curImageG2D = curImage.createGraphics();
+			curImageG2D.setColor(Color.BLACK);
+			curImageG2D.fillRect(0, 0, dimX, dimY );
 			drawLines(g2d);
 		}
 		else{

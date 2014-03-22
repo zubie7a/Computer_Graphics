@@ -166,7 +166,7 @@ public class DrawingPanel extends JPanel implements MouseListener,
         // nates of the cursor hovering the image, which instead of being
         // re-ren-
         // dered piece by piece, it is just loaded and then this is drawn above.
-        g2d.setColor(Color.BLACK);
+        g2d.setColor(new Color(64, 64, 64));
         String pos = curX + ", " + curY * -1;
         int mx = curX + midX;
         int my = curY + midY;
