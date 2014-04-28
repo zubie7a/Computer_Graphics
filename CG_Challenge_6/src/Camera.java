@@ -69,6 +69,24 @@ public class Camera {
 		u = new Vector3D(uP.x, uP.y, uP.z);
 		makeLook();		
 	}
+	
+	public void shiftZ(int dz){
+		point.z += dz;
+		pointb.z += dz;
+	}
+	
+	public void shiftY(int dy){
+		point.y += dy;
+		pointb.y += dy;
+	}
+	
+	public void shiftX(int dx){
+		point.x += dx;
+		pointb.x += dx;
+	}
 
+	public Point3D getPoint(){
+		return new Point3D(dX, dY, dZ);
+	}
 
 }

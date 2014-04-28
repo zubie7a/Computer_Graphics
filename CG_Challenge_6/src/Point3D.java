@@ -66,7 +66,7 @@ public class Point3D {
 	}
 	
 	public void rotateZX(float angleZX){
-		// Convert angles from Deg to Rad
+		// Convert angle from Deg to Rad
 		angleZX *= Math.PI / 180;
 		float cos = (float) Math.cos(angleZX);
 		float sin = (float) Math.sin(angleZX);
@@ -112,6 +112,12 @@ public class Point3D {
 	}
 	
 	public void project(){
+		// This will flatten 3D points into 2D space using a perspective projection.
+		// The projection plane is 1000 units from the origin, and the program has
+		// ..to make sure the points doesn't cross this plane, or glitches will ha-
+		// ..ppen (like the points crossing it having their signs changed, so if a
+		// ..shape partially crosses this plane, some points will be swapped and
+		// ..others won't resulting in a very messed up shape)
 		float dist = 1000;
 		float f = 1f/dist;
 		z += dist; 
@@ -137,25 +143,25 @@ public class Point3D {
 		Vector3D n = camera.n; // The 'looking-at' vector
 		n.normalize(); 
 		Vector3D u = cam.u; // The 'kinda up' vector
-		u = u.crossProduct(u, n); // Now a 'sideways' vector
+		u = Vector3D.crossProduct(u, n); // Now a 'sideways' vector
 		u.normalize();
-		Vector3D v = n.crossProduct(n, u); // The 'real up' vector		
+		Vector3D v = Vector3D.crossProduct(n, u); // The 'real up' vector
+		Vector3D camPos = new Vector3D(camera.point, new Point3D(0,0,0));
+		float dx = Vector3D.dotProduct(u, camPos); 
+		float dy = Vector3D.dotProduct(v, camPos);
+		float dz = Vector3D.dotProduct(n, camPos);
 		float matrix[][] = { 
-				{ u.x, u.y, u.z, 0 }, 
-				{ v.x, v.y, v.z, 0 }, 
-				{ n.x, n.y, n.z, 0 }, 
-				{   0,   0,   0, 1 }
+				{ u.x, u.y, u.z, dx }, 
+				{ v.x, v.y, v.z, dy }, 
+				{ n.x, n.y, n.z, dz }, 
+				{   0,   0,   0,  1 }
 		};
 		Matrix3D camMatrix = new Matrix3D(matrix);
-		Point3D adjustedPoint = Matrix3D.multiplyMatrixAndPoint(camMatrix, this);
-		this.x = adjustedPoint.x;
-		this.y = adjustedPoint.y;
-		this.z = adjustedPoint.z;
-		this.w = adjustedPoint.w;
-		// ..then translated to compensate for the camera's changes in X/Y/Z axis
-		this.translate(-cam.dX, -cam.dY, -cam.dZ);
-		// ..and then projected to our custom plane of projection with a set distance 
-		// ..of 1000 (Z increases outwards the screen)
+		Point3D alignedPoint = Matrix3D.multiplyMatrixAndPoint(camMatrix, this);
+		this.x = alignedPoint.x;
+		this.y = alignedPoint.y;
+		this.z = alignedPoint.z;
+		this.w = alignedPoint.w;
 		this.project();
 	}
 	

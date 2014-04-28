@@ -46,15 +46,14 @@ public class Window extends PApplet {
 	
 	public void keyPressed(KeyEvent e){
 		// These are for moving the camera in a certain axis direction
-		// Z increases outwards, so reducing the camera Z is getting closer
-		if(e.getKey() == 'w') cam.dZ -= 42;
-		if(e.getKey() == 's') cam.dZ += 42;
+		if(e.getKey() == 'w') cam.shiftZ( 42);
+		if(e.getKey() == 's') cam.shiftZ(-42);
 		// Moving in the Z axis
-		if(e.getKey() == 'a') cam.dX -= 10;
-		if(e.getKey() == 'd') cam.dX += 10;
+		if(e.getKey() == 'a') cam.shiftX(-10);
+		if(e.getKey() == 'd') cam.shiftX( 10);
 		// Moving in the X axis
-		if(e.getKey() == 'q') cam.dY += 10;
-		if(e.getKey() == 'e') cam.dY -= 10;
+		if(e.getKey() == 'q') cam.shiftY( 10);
+		if(e.getKey() == 'e') cam.shiftY(-10);
 		// Moving in the Y axis
 
 		// These are for rotating the camera around a certain axis
