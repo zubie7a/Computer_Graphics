@@ -1,5 +1,5 @@
 ##Santiago Zubieta
-####EAFIT University, 2014-1 
+####EAFIT University, 2014-1
 
 #Computer Graphics Weekly Challenges
 Each challenge will have a very comprenhensive PDF explaining the algorithms used and screenshots of the application. These challenges' codes are made for educational purposes and licensed under the MIT License. These are just some few examples of what each one of the challenges achieve:
