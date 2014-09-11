@@ -1,7 +1,7 @@
 ##Santiago Zubieta
 ####EAFIT University, 2014-1
 
-*'Sends me into hyperspace, when I see her pretty face'*
+*'Sends me into hyperspace, when I see her pretty face'*  
 -Jamiroquai, Cosmic Girl
 
 #Computer Graphics Weekly Challenges
