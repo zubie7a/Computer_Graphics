@@ -5,7 +5,7 @@
 -Jamiroquai, Cosmic Girl
 
 #Computer Graphics Weekly Challenges
-Each challenge has a very comprenhensive PDF explaining the algorithms used and screenshots of the application *(click on each image to open it)*. The first two challenges were done using **Java's AWT** and **Swing**, whereas from the third challenge on, these were made with **AWT/Swing** AND **Processing** *(for the course purposes, no pre-made transformations where used, all were hand coded!)*. Adding **Processing** into the mix was nice because of its simplified application for interactive sketches and the use of a main non-blocking event-handling *loop*. These challenges' codes were made for educational purposes and are licensed under the **MIT License**. **Click on each image to open the PDF document regarding explanations**. These are just some few screenshots showing what each one of the challenges achieve:
+Each challenge has a very comprenhensive **PDF** explaining the algorithms used and screenshots of the application *(click on each image to open it)*. The first two challenges were done using **Java's AWT** and **Swing**, whereas from the third challenge on, these were made with **AWT/Swing** AND **Processing** *(for the course purposes, no pre-made transformations where used, all were hand coded!)*. Adding **Processing** into the mix was nice because of its simplified application for interactive sketches and the use of a main non-blocking event-handling *loop*. These challenges' codes were made for educational purposes and are licensed under the **MIT License**. **Click on each image to open the PDF document regarding explanations**. These are just some few screenshots showing what each one of the challenges achieve:
 
 ###Challenge 1 - Bresenham Algorithm: Lines & Circles
 
